@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — Jev Mailbox Cleaner</title>
+<link rel="icon" type="image/png" href="logo.png" />
+<style>
+  :root { color-scheme: dark; }
+  body { background:#0b0e14; color:#e6e8ef; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; max-width:680px; margin:0 auto; padding:48px 20px; line-height:1.6; }
+  h1 { font-size:26px; }
+  h2 { font-size:18px; margin-top:32px; }
+  a { color:#34d399; }
+  .muted { color:#8890a4; font-size:14px; }
+  nav { margin-bottom:32px; }
+</style>
+</head>
+<body>
+  <nav><a href="index.html">&larr; Jev Mailbox Cleaner</a></nav>
+  <h1>Privacy Policy</h1>
+  <p class="muted">Last updated: 2026-09-28</p>
+
+  <p>
+    Jev Mailbox Cleaner is a personal, self-hosted application built, deployed, and used
+    solely by its developer. It is not offered as a service to the public and does not have
+    other end users. This policy explains what the application does with data from the
+    Gmail account(s) it is connected to.
+  </p>
+
+  <h2>What data is accessed</h2>
+  <p>
+    When connected to a Gmail account via Google OAuth (scope:
+    <code>https://www.googleapis.com/auth/gmail.modify</code>), the application reads the
+    subject, sender, and body text of messages in that account's inbox, and can add/remove
+    Gmail labels or archive messages on that account.
+  </p>
+
+  <h2>How the data is used</h2>
+  <p>
+    Message subject, sender, and body text are sent to a third-party AI classification API
+    (TypeSafe / Jev) solely to evaluate them against user-defined rules (for example,
+    "is this a promotional email?"). No data is used for advertising, profiling, or any
+    purpose other than classifying the developer's own inbox contents against rules the
+    developer configured.
+  </p>
+
+  <h2>Where the data is stored</h2>
+  <p>
+    Classification results and Gmail OAuth credentials are stored locally in a SQLite
+    database on infrastructure the developer owns and operates (a self-hosted Docker
+    container). Credentials are encrypted at rest. Nothing is stored on, or transmitted to,
+    any server operated by a third party other than the classification API call described
+    above.
+  </p>
+
+  <h2>Data sharing</h2>
+  <p>
+    Data is not sold, shared, or disclosed to any third party except the classification API
+    call described above, which is necessary for the application's core function.
+  </p>
+
+  <h2>Data retention and revocation</h2>
+  <p>
+    Data is retained for as long as the developer continues to operate the application.
+    Access can be revoked at any time from
+    <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account &rarr; Third-party access</a>,
+    which immediately stops the application from accessing the account.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions about this policy can be sent to the developer contact address listed on this
+    application's Google Cloud OAuth consent screen.
+  </p>
+</body>
+</html>
